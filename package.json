@@ -1,0 +1,23 @@
+{
+  "name": "nodeDemo",
+  "version": "1.0.0",
+  "description": "19.120firstNodeDemo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lql005/nodeDemo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lql005/nodeDemo/issues"
+  },
+  "homepage": "https://github.com/lql005/nodeDemo#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
