@@ -4,6 +4,8 @@
 <head>
     <title>欢迎注册</title>
     <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/md5.js"></script>
 </head>
 
 <body>
@@ -38,5 +40,19 @@
     </div>
 </body>
 <script>
+    function register(){
+        const userName = $('#usernameId').val()
+        const passWord = $.md5($('#passwordId').val()+'!@#$%^')
+        $.post('/account/register',{userName,passWord},(obj) => {
+            console.log(obj);
+            if(obj.status==0){
+                location = '/views/login.html'
+            }else if(obj.status==1){
+                alert(obj.msg)
+            }else{
+                alert(obj.msg)
+            }
+        })
+    }
 </script>
 </html>

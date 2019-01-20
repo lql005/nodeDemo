@@ -1,10 +1,19 @@
 //导包
 const express = require("express")
 
-//穿件APP  服务器
+
 const app = express();
 
 const path = require('path')
+const session = require('express-session');
+                        
+const bodyParser = require('body-parser')
+
+app.use(session({ secret: 'keyboard cat', cookie: { maxAge: 600000 }}))
+
+app.use(bodyParser.json())
+
+app.use(bodyParser.urlencoded({ extended: false }))
 
 const accountRouter = require(path.join(__dirname,'routers/accountRouter.js'))
 
